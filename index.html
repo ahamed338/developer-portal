@@ -38,8 +38,8 @@
           <dd>New service onboarding</dd>
         </div>
         <div>
-          <dt>1 golden path</dt>
-          <dd>Zero manual CI assembly</dd>
+          <dt id="catalog-count">—</dt>
+          <dd>Services in Catalog</dd>
         </div>
         <div>
           <dt>Default secure</dt>
@@ -118,5 +118,16 @@
   <footer class="site-footer">
     <p>Developer Portal — Internal Developer Platform demo. Built with static HTML, deployed on Cloudflare Pages.</p>
   </footer>
+
+  <script>
+  fetch('http://localhost:3000/api/catalog/entities?filter=kind=component')
+    .then(r => r.json())
+    .then(data => {
+      document.getElementById('catalog-count').textContent = data.length;
+    })
+    .catch(() => {
+      document.getElementById('catalog-count').textContent = '0';
+    });
+</script>
 </body>
 </html>
