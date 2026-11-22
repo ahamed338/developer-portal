@@ -119,14 +119,17 @@
     <p>Developer Portal — Internal Developer Platform demo. Built with static HTML, deployed on Cloudflare Pages.</p>
   </footer>
 
-  <script>
-  fetch('http://localhost:3000/api/catalog/entities?filter=kind=component')
-    .then(r => r.json())
+<script>
+  fetch('http://localhost:7007/api/catalog/entities?filter=kind=component')
+    .then(r => {
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return r.json();
+    })
     .then(data => {
       document.getElementById('catalog-count').textContent = data.length;
     })
     .catch(() => {
-      document.getElementById('catalog-count').textContent = '0';
+      document.getElementById('catalog-count').textContent = '—';
     });
 </script>
 </body>
