@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Developer Portal — Internal Developer Platform</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/">
+      <span class="brand-mark">DP</span>
+      <span>Developer Portal</span>
+    </a>
+    <nav class="nav">
+      <a href="#capabilities">Capabilities</a>
+      <a href="#how-it-works">How it works</a>
+      <a class="nav-cta" href="#demo">Try the demo</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">Internal Developer Platform</p>
+      <h1>From empty repo to running service, without raising a ticket.</h1>
+      <p class="lede">
+        A self-service paved path for developers: pick a template, get a repo,
+        standardized CI, and a deployable skeleton in minutes — with guardrails
+        built in, not bolted on.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#demo">Open the portal</a>
+        <a class="btn btn-ghost" href="#capabilities">See capabilities</a>
+      </div>
+      <dl class="metrics">
+        <div>
+          <dt>3 days → 10 min</dt>
+          <dd>New service onboarding</dd>
+        </div>
+        <div>
+          <dt>1 golden path</dt>
+          <dd>Zero manual CI assembly</dd>
+        </div>
+        <div>
+          <dt>Default secure</dt>
+          <dd>Guardrails in the template</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section id="capabilities" class="section">
+      <h2>What the platform gives developers</h2>
+      <p class="section-lede">
+        Every capability exists to remove a manual step from the path to production.
+      </p>
+      <div class="grid">
+        <article class="card">
+          <h3>Self-service scaffolding</h3>
+          <p>
+            Create a new service from a vetted template. The repo, Dockerfile,
+            and CI workflow are generated together — no YAML assembly required.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Standardized CI</h3>
+          <p>
+            Builds and tests run automatically on first push via GitHub Actions.
+            The workflow is part of the skeleton, not a separate ticket.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Reversible abstraction</h3>
+          <p>
+            Developers use the template by default, but senior engineers can
+            inspect and modify the generated files. The platform is a floor, not a ceiling.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="how-it-works" class="section section-alt">
+      <h2>How it works</h2>
+      <ol class="steps">
+        <li>
+          <span class="step-num">1</span>
+          <div>
+            <h3>Open the portal</h3>
+            <p>Developers start at this landing page and click through to Backstage.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step-num">2</span>
+          <div>
+            <h3>Pick a template</h3>
+            <p>Choose a service type, name it, and submit. No approvals in the demo path.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step-num">3</span>
+          <div>
+            <h3>Get a repo with CI</h3>
+            <p>Backstage creates the GitHub repo and the Actions workflow runs on first push.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section id="demo" class="section cta">
+      <h2>Try the demo</h2>
+      <p>
+        This button points to the Backstage instance. Replace the href with your
+        deployed Backstage URL (or a screen recording) before the interview.
+      </p>
+      <a class="btn btn-primary btn-lg" href="#" id="backstage-link">Launch Backstage</a>
+      <p class="note">Demo environment · not production</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Developer Portal — Internal Developer Platform demo. Built with static HTML, deployed on Cloudflare Pages.</p>
+  </footer>
+</body>
+</html>
